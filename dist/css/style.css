@@ -1,0 +1,21 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+#nav-logo img {
+  fill: red;
+}
+
+#nav-logo object {
+  fill: red;
+}
+
+#footer-social {
+  background-color: black;
+}
+/*# sourceMappingURL=style.css.map */

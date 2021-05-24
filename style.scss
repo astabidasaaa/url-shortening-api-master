@@ -22,7 +22,9 @@ $very-dark-violet: hsl(260, 8%, 14%);
 }
 
 html {
-  overflow: visible;
+  overflow: auto;
+  // overflow-y: auto;
+  // overflow-x: hidden;
 }
 
 body {
@@ -33,7 +35,8 @@ body {
   align-items: center;
   margin: 0;
   position: relative;
-  overflow: visible;
+  // overflow-y: auto;
+  overflow: hidden;
 }
 
 nav {
@@ -44,7 +47,7 @@ nav {
   width: 100%;
   padding: 2.8rem 0 1rem;
   z-index: 999;
-  background-color: #fff;
+  background-color: $white;
 
   div#nav-container {
     display: flex;
@@ -106,6 +109,7 @@ section#home {
   align-items: center;
   width: 77%;
   padding: 3rem 0 1rem;
+  // overflow: hidden;
 
   div#home-text {
     max-width: 55%;
@@ -134,12 +138,15 @@ section#shorten {
   box-sizing: border-box;
   width: 100%;
   padding: 2.5rem 0;
+
   div#shorten-container {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
     width: 77%;
     border-radius: 10px;
     padding: 2.8rem 3.4rem;
@@ -154,6 +161,7 @@ section#shorten {
       box-sizing: border-box;
       width: 100%;
       font-size: 1.1rem;
+      z-index: 2;
       input {
         border: none;
         outline: none;
@@ -183,14 +191,24 @@ section#statistic {
   p {
     width: 50%;
     text-align: center;
+    margin-bottom: 1.4rem;
   }
 
   div#statistic-points {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
+    height: 24rem;
+
+    div.point:nth-child(1) {
+      align-self: flex-start;
+    }
+
+    div.point:nth-child(3) {
+      align-self: flex-end;
+    }
 
     div.point {
       display: flex;
@@ -198,6 +216,10 @@ section#statistic {
       justify-content: center;
       align-items: flex-start;
       box-sizing: border-box;
+      width: 31.5%;
+      background-color: #ccc;
+      border-radius: 5px;
+      padding: 1.8rem;
 
       div.point-badge {
         background-color: $dark-violet;
@@ -220,12 +242,14 @@ section#statistic {
       div.point-title {
         margin: 2rem 0 1rem;
         h5 {
+          width: 100%;
         }
       }
 
       div.point-text {
         p {
           text-align: left;
+          width: 100%;
         }
       }
     }
@@ -233,43 +257,116 @@ section#statistic {
 }
 
 section#boost {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 3rem 0;
+  background-color: $dark-violet;
   h3 {
+    margin-bottom: 1.8rem;
+    z-index: 2;
   }
 
   button#boost-btn {
+    font-size: 1.2rem;
+    z-index: 2;
   }
 }
 
 footer {
-  svg#footer-logo {
-    use {
-    }
-  }
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+  background-color: $very-dark-violet;
 
-  div#footer-links {
-    div#link-feature {
-      p {
+  #footer-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-sizing: border-box;
+    width: 77%;
+
+    svg#footer-logo {
+      width: 120px;
+      height: 33px;
+      fill: $white;
+    }
+
+    div#footer-links {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      box-sizing: border-box;
+      width: 66%;
+      div#link-feature {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 25%;
+        // margin-right: 2rem;
+        p {
+          font-weight: 700;
+          margin-bottom: 1.5rem;
+        }
+
+        a {
+          margin-bottom: 1.1rem;
+        }
+
+        a:nth-child(5) {
+          margin-bottom: 0;
+        }
       }
 
-      a {
-      }
-    }
-  }
-
-  div#footer-social {
-    svg.icon-social {
-      use {
+      div#footer-social {
+        width: 23%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        svg.icon-social {
+          width: 24px;
+          height: 24px;
+        }
       }
     }
   }
 }
 
 .attribution {
-  font-size: 11px;
+  width: 100%;
+  background-color: $very-dark-violet;
   text-align: center;
+  padding: 0 0 2rem;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  // color: hsl(228, 45%, 44%);
+}
+
+// BACKGROUND
+
+img#bg-shorten-desktop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+img#bg-boost-desktop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
 // BUTTONS
@@ -290,7 +387,7 @@ button {
   &.primary {
     background-color: $cyan;
     border-radius: 50px;
-    padding: 0.6em 1.6em;
+    padding: 0.6em 1.8em;
 
     &:hover {
       // background-color: $very-light-gray;
@@ -364,11 +461,11 @@ p {
   letter-spacing: -0.5px;
   margin: 0;
   &.large {
-    font: 400 1.23rem/2rem poppins;
+    font: 500 1.23rem/2rem poppins;
   }
 
   &.medium {
-    font: 400 1rem/1.8rem poppins;
+    font: 500 1rem/1.8rem poppins;
   }
 
   &.small {
@@ -396,7 +493,7 @@ a {
   }
   &:active {
     text-decoration: none;
-    color: #31837a;
+    color: $cyan;
   }
 }
 

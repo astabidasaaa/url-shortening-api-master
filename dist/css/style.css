@@ -4,7 +4,7 @@
 }
 
 html {
-  overflow: visible;
+  overflow: auto;
 }
 
 body {
@@ -24,7 +24,7 @@ body {
           align-items: center;
   margin: 0;
   position: relative;
-  overflow: visible;
+  overflow: hidden;
 }
 
 nav {
@@ -204,6 +204,8 @@ section#shorten div#shorten-container {
           align-items: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
   width: 77%;
   border-radius: 10px;
   padding: 2.8rem 3.4rem;
@@ -228,6 +230,7 @@ section#shorten div#shorten-container form {
           box-sizing: border-box;
   width: 100%;
   font-size: 1.1rem;
+  z-index: 2;
 }
 
 section#shorten div#shorten-container form input {
@@ -268,6 +271,7 @@ section#statistic h3 {
 section#statistic p {
   width: 50%;
   text-align: center;
+  margin-bottom: 1.4rem;
 }
 
 section#statistic div#statistic-points {
@@ -278,14 +282,25 @@ section#statistic div#statistic-points {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  height: 24rem;
+}
+
+section#statistic div#statistic-points div.point:nth-child(1) {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+section#statistic div#statistic-points div.point:nth-child(3) {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 section#statistic div#statistic-points div.point {
@@ -304,6 +319,10 @@ section#statistic div#statistic-points div.point {
           align-items: flex-start;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  width: 31.5%;
+  background-color: #ccc;
+  border-radius: 5px;
+  padding: 1.8rem;
 }
 
 section#statistic div#statistic-points div.point div.point-badge {
@@ -337,17 +356,180 @@ section#statistic div#statistic-points div.point div.point-title {
   margin: 2rem 0 1rem;
 }
 
+section#statistic div#statistic-points div.point div.point-title h5 {
+  width: 100%;
+}
+
 section#statistic div#statistic-points div.point div.point-text p {
   text-align: left;
+  width: 100%;
+}
+
+section#boost {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 3rem 0;
+  background-color: #3b3054;
+}
+
+section#boost h3 {
+  margin-bottom: 1.8rem;
+  z-index: 2;
+}
+
+section#boost button#boost-btn {
+  font-size: 1.2rem;
+  z-index: 2;
+}
+
+footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4rem 0;
+  background-color: #232127;
+}
+
+footer #footer-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 77%;
+}
+
+footer #footer-container svg#footer-logo {
+  width: 120px;
+  height: 33px;
+  fill: #fff;
+}
+
+footer #footer-container div#footer-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 66%;
+}
+
+footer #footer-container div#footer-links div#link-feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 25%;
+}
+
+footer #footer-container div#footer-links div#link-feature p {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+footer #footer-container div#footer-links div#link-feature a {
+  margin-bottom: 1.1rem;
+}
+
+footer #footer-container div#footer-links div#link-feature a:nth-child(5) {
+  margin-bottom: 0;
+}
+
+footer #footer-container div#footer-links div#footer-social {
+  width: 23%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+footer #footer-container div#footer-links div#footer-social svg.icon-social {
+  width: 24px;
+  height: 24px;
 }
 
 .attribution {
-  font-size: 11px;
+  width: 100%;
+  background-color: #232127;
   text-align: center;
+  padding: 0 0 2rem;
 }
 
-.attribution a {
-  color: #3e52a3;
+img#bg-shorten-desktop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+img#bg-boost-desktop {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }
 
 button {
@@ -372,7 +554,7 @@ button {
 button.primary {
   background-color: #2acfcf;
   border-radius: 50px;
-  padding: 0.6em 1.6em;
+  padding: 0.6em 1.8em;
 }
 
 button.submit-btn {
@@ -445,11 +627,11 @@ p {
 }
 
 p.large {
-  font: 400 1.23rem/2rem poppins;
+  font: 500 1.23rem/2rem poppins;
 }
 
 p.medium {
-  font: 400 1rem/1.8rem poppins;
+  font: 500 1rem/1.8rem poppins;
 }
 
 p.small {
@@ -479,7 +661,7 @@ a:hover {
 
 a:active {
   text-decoration: none;
-  color: #31837a;
+  color: #2acfcf;
 }
 
 .dark {

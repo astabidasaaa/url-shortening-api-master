@@ -62,6 +62,11 @@
     </section>
     <section id="shorten">
       <div id="shorten-container">
+        <img
+          id="bg-shorten-desktop"
+          src="./images/bg-shorten-desktop.svg"
+          alt=""
+        />
         <form action="">
           <input
             type="text"
@@ -129,51 +134,68 @@
       </div>
     </section>
     <section id="boost">
-      <h3>Boost your links today</h3>
-      <button id="boost-btn">Get Started</button>
+      <img id="bg-boost-desktop" src="./images/bg-boost-desktop.svg" alt="" />
+      <h3 class="light">Boost your links today</h3>
+      <button id="boost-btn" class="primary">Get Started</button>
     </section>
+
     <footer>
-      <svg id="footer-logo" class="svg-logo">
-        <use href="#logo" />
-      </svg>
-      <div id="footer-links">
-        <div id="link-feature">
-          <p>Features</p>
-          <a href="#/">Link Shortening</a><a href="#/">Branded Links</a
-          ><a href="#/">Analytics</a>
+      <div id="footer-container">
+        <svg id="footer-logo" class="svg-logo">
+          <use href="#logo" />
+        </svg>
+
+        <div id="footer-links">
+          <div id="link-feature">
+            <p class="light small">Features</p>
+            <a href="#/" class="light">Link Shortening</a
+            ><a href="#/" class="light">Branded Links</a
+            ><a href="#/" class="light">Analytics</a>
+          </div>
+          <div id="link-feature">
+            <p class="light small">Resources</p>
+            <a href="#/" class="light">Blog</a
+            ><a href="#/" class="light">Developers</a
+            ><a href="#/" class="light">Support</a>
+          </div>
+          <div id="link-feature">
+            <p class="light small">Company</p>
+            <a href="#/" class="light">About</a
+            ><a href="#/" class="light">Our Team</a
+            ><a href="#/" class="light">Careers</a
+            ><a href="#/" class="light">Contact</a>
+          </div>
+          <div id="footer-social">
+            <svg class="icon-social">
+              <use href="#icon-facebook" />
+            </svg>
+            <svg class="icon-social">
+              <use href="#icon-twitter" />
+            </svg>
+            <svg class="icon-social">
+              <use href="#icon-pinterest" />
+            </svg>
+            <svg class="icon-social">
+              <use href="#icon-instagram" />
+            </svg>
+          </div>
         </div>
-        <div id="link-feature">
-          <p>Resources</p>
-          <a href="#/">Blog</a><a href="#/">Developers</a
-          ><a href="#/">Support</a>
-        </div>
-        <div id="link-feature">
-          <p>Company</p>
-          <a href="#/">About</a><a href="#/">Our Team</a><a href="#/">Careers</a
-          ><a href="#/">Contact</a>
-        </div>
-      </div>
-      <div id="footer-social">
-        <svg class="icon-social">
-          <use href="#icon-facebook" />
-        </svg>
-        <svg class="icon-social">
-          <use href="#icon-twitter" />
-        </svg>
-        <svg class="icon-social">
-          <use href="#icon-pinterest" />
-        </svg>
-        <svg class="icon-social">
-          <use href="#icon-instagram" />
-        </svg>
       </div>
     </footer>
 
     <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      <p class="small light">
+        Challenge by
+        <a
+          class="light"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a class="light" href="https://sngkr.netlify.app/" target="_blank"
+          >Sangkara</a
+        >.
+      </p>
     </div>
   </body>
 </html>
@@ -274,4 +296,56 @@
       d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"
     />
   </symbol>
+
+  <!-- <symbol
+    id="bg-boost-desktop"
+    xmlns="http://www.w3.org/2000/svg"
+    width="1440"
+    height="250"
+  >
+    <g fill="#4B3F6B" fill-rule="evenodd">
+      <path
+        d="M830-63.482C830 19.351 854.36 78.678 944.732 117c90.371 38.321 177.686 3.352 265.277 23.4 87.59 20.048 87.59 149.195 170.077 228.671 82.486 79.476 256.405 98.781 397.82 18.15 141.415-80.632 205.52-268.896 163.267-379.902C1898.919-103.687 1817.943-205 1427.236-205S830-146.314 830-63.482zM-263.351 570.909c29.685 77.331 73.689 123.988 171.79 127.377 98.102 3.39 167.085-60.547 256.043-73.22 88.958-12.674 135.24 107.895 240.73 152.532 105.488 44.638 274.775.333 377.9-125.622C886.24 526.021 878.62 327.29 799.392 238.798 720.162 150.307 608.257 84.743 243.5 224.76c-364.757 140.017-536.537 268.818-506.852 346.149zM-514-377.482c0 82.833 24.36 142.16 114.732 180.482 90.371 38.321 177.686 3.352 265.277 23.4 87.59 20.048 87.59 149.195 170.077 228.671 82.486 79.476 256.405 98.781 397.82 18.15 141.415-80.632 205.52-268.896 163.267-379.902C554.919-417.687 473.943-519 83.236-519S-514-460.314-514-377.482z"
+      />
+    </g>
+  </symbol>
+
+  <symbol
+    id="bg-boost-mobile"
+    xmlns="http://www.w3.org/2000/svg"
+    width="375"
+    height="300"
+  >
+    <g fill="#4B3F6B" fill-rule="evenodd">
+      <path
+        d="M-263.351 570.909c29.685 77.331 73.689 123.988 171.79 127.377 98.102 3.39 167.085-60.547 256.043-73.22 88.958-12.674 135.24 107.895 240.73 152.532 105.488 44.638 274.775.333 377.9-125.622C886.24 526.021 878.62 327.29 799.392 238.798 720.162 150.307 608.257 84.743 243.5 224.76c-364.757 140.017-536.537 268.818-506.852 346.149zM-514-377.482c0 82.833 24.36 142.16 114.732 180.482 90.371 38.321 177.686 3.352 265.277 23.4 87.59 20.048 87.59 149.195 170.077 228.671 82.486 79.476 256.405 98.781 397.82 18.15 141.415-80.632 205.52-268.896 163.267-379.902C554.919-417.687 473.943-519 83.236-519S-514-460.314-514-377.482z"
+      />
+    </g>
+  </symbol>
+
+  <symbol
+    id="bg-shorten-desktop"
+    xmlns="http://www.w3.org/2000/svg"
+    width="1110"
+    height="168"
+  >
+    <path
+      fill="#4B3F6B"
+      fill-rule="evenodd"
+      d="M647-93.924c0 52.724 15.5 90.486 73 114.877 57.5 24.391 113.055 2.134 168.786 14.894 55.731 12.76 55.731 94.962 108.214 145.549s163.142 62.874 253.12 11.552c89.976-51.322 130.765-171.152 103.88-241.807C1327.115-119.515 1275.593-184 1027-184c-248.593 0-380 37.353-380 90.076zm-781 213c0 52.724 15.5 90.486 73 114.877 57.5 24.391 113.055 2.134 168.786 14.894 55.731 12.76 55.731 94.962 108.214 145.549s163.142 62.874 253.12 11.552C559.095 354.626 599.884 234.796 573 164.141 546.115 93.485 494.593 29 246 29c-248.593 0-380 37.353-380 90.076z"
+    />
+  </symbol>
+
+  <symbol
+    id="bg-shorten-mobile"
+    xmlns="http://www.w3.org/2000/svg"
+    width="237"
+    height="128"
+  >
+    <path
+      fill="#4B3F6B"
+      fill-rule="evenodd"
+      d="M0-.924C0 51.8 15.5 89.562 73 113.953c57.5 24.391 113.055 2.134 168.786 14.894 55.731 12.76 55.731 94.962 108.214 145.549s163.142 62.874 253.12 11.552C693.095 234.626 733.884 114.796 707 44.141 680.115-26.515 628.593-91 380-91 131.407-91 0-53.647 0-.924z"
+    />
+  </symbol> -->
 </svg>
